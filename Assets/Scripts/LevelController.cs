@@ -32,15 +32,15 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Fade(true);
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Fade(false);
-        }
-    }
+    //public void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Q))
+    //    {
+    //        Fade(true);
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.W))
+    //    {
+    //        Fade(false);
+    //    }
+    //}
 }
