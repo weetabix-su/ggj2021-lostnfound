@@ -19,7 +19,17 @@ public class LevelController : MonoBehaviour
     [Header("Object reference")]
     public GameObject playerObj;
 
+    [Header("CheckPoint reference")]
+    public Vector3[] checkPointRef;
 
+    [Header("Scene 1 reference")]
+    //Store
+    public List<GameObject> scene1Go;
+    //Ref
+    public GameObject queueGo;
+    public Vector3 queueGoSpawnLocation;
+    public GameObject guardGo;
+    public Vector3 guardGoSpawnLocation;
 
     public void Fade(bool isFadeIn)
     {
@@ -56,7 +66,16 @@ public class LevelController : MonoBehaviour
         switch (levelNumber)
         {
             case 1:
-
+                {
+                    foreach (GameObject obj in scene1Go)
+                    {
+                        Destroy(obj);
+                    }
+                    //Spawn queue
+                    scene1Go.Add(Instantiate(queueGo, queueGoSpawnLocation, Quaternion.identity));
+                    //Spawn guard
+                    scene1Go.Add(Instantiate(guardGo, guardGoSpawnLocation, Quaternion.identity));
+                }
                 break;
             case 2:
                 break;

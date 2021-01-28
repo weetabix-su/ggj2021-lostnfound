@@ -19,8 +19,6 @@ public class Queue : MonoBehaviour
     [Space(5)]
     public GameObject destroyCollider;
 
-
-
     void Start()
     {
         for (int i = 0; i < numberOfHumans; i++)
@@ -36,6 +34,11 @@ public class Queue : MonoBehaviour
         destroyCollider.SetActive(true);
         DestroyCollider.OnEnter += RemoveHuman;
         StartQueue();
+    }
+
+    private void OnDestroy()
+    {
+        DestroyCollider.OnEnter -= RemoveHuman;
     }
 
     void StartQueue()

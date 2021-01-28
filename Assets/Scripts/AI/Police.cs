@@ -48,7 +48,7 @@ public class Police : MonoBehaviour
 
         //if (!_isDead)
         //{
-            if (!playerInSightRange && !playerInAttackRange) Patroling();
+            if (!playerInSightRange && !playerInAttackRange) Idling();
             if (playerInSightRange && !playerInAttackRange) ChasePlayer();
             if (playerInAttackRange && playerInSightRange) AttackPlayer();
         //}
@@ -56,28 +56,9 @@ public class Police : MonoBehaviour
         //animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
     }
 
-    private void Patroling()
+    private void Idling()
     {
-        Debug.Log("Patroling");
-        if (!walkPointSet)
-            SearchWalkPoint();
-        else
-            agent.SetDestination(walkPoint);
-
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
-
-        //Walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
-            walkPointSet = false;
-    }
-
-    private void SearchWalkPoint()
-    {
-        //Calculate random point in range
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
-
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        return;
     }
 
     private void ChasePlayer()
@@ -88,21 +69,14 @@ public class Police : MonoBehaviour
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-
         transform.LookAt(player);
 
-        if (!alreadyAttacked)
-        {
-            //animator.SetTrigger("Attack");
-
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
+        KillPlayer();
     }
 
-    private void ResetAttack()
-    {
-        alreadyAttacked = false;
+    private void KillPlayer()
+    { 
+        
     }
 
     private void OnDrawGizmosSelected()
