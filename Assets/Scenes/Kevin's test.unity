@@ -133,8 +133,10 @@ GameObject:
   - component: {fileID: 678552103}
   - component: {fileID: 678552102}
   - component: {fileID: 678552101}
+  - component: {fileID: 678552106}
+  - component: {fileID: 678552105}
   m_Layer: 0
-  m_Name: Ocean
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,13 +149,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678552100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c6a6df342b52d24092cf6bbb590c535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waveHeight: 1.5
-  waveFrequency: 0.5
+  waveFrequency: 0
   waveLength: 0.5
   waveOriginPosition: {x: 0, y: 0, z: 0}
 --- !u!23 &678552102
@@ -217,6 +219,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &678552105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678552100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fd19fd065da0047aadf26fdaae56b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 2
+  length: 2
+  speed: 1
+  offset: 0
+--- !u!114 &678552106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678552100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed70a70ef975d349ade81ffb3628831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveHeight: 0.5
+  waveFrequency: 0.5
+  waveLength: 0.75
+  waveOriginPosition: {x: 0, y: 0, z: 0}
+  tris: 
 --- !u!1 &1082903613
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,8 +467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4257246b4cdd28040b82e87dd2318fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  depthBeforeSubmerged: 1
+  rb: {fileID: 1172748095}
+  depthBeforeSubmerged: 0.1
   displacementAmount: 3
 --- !u!1 &1689146550
 GameObject:
