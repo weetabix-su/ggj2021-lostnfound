@@ -10,13 +10,14 @@ public class Floater : MonoBehaviour
     private void FixedUpdate()
     {
         float waveHeight = WaveManager.instance.GetWaveHeight(transform.position.x);
-        if (transform.position.y < waveHeight)
-        {
-            float displacementMultiplier = Mathf.Clamp01((waveHeight-transform.position.y)/depthBeforeSubmerged) * displacementAmount;
-            rb.AddForce(new Vector3(0f, Mathf.Abs(Physics.gravity.y) * displacementMultiplier, 0f));
+        this.transform.position = new Vector3(this.transform.position.x, WaveManager.instance.GetWaveHeight(transform.position.x), this.transform.position.z);
+        //if (transform.position.y < waveHeight)
+        //{
+        //    float displacementMultiplier = Mathf.Clamp01((waveHeight-transform.position.y)/depthBeforeSubmerged) * displacementAmount;
+        //    //rb.AddForce(new Vector3(0f, Mathf.Abs(Physics.gravity.y) * displacementMultiplier, 0f));
+        //    this.transform.position = new Vector3(this.transform.position.x, WaveManager.instance.GetWaveHeight(transform.position.x), this.transform.position.z);
 
-
-        }
+        //}
     }
 
 
