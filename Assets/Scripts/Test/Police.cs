@@ -53,11 +53,12 @@ public class Police : MonoBehaviour
             if (playerInAttackRange && playerInSightRange) AttackPlayer();
         //}
 
-        animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
+        //animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
     }
 
     private void Patroling()
     {
+        Debug.Log("Patroling");
         if (!walkPointSet)
             SearchWalkPoint();
         else
@@ -92,7 +93,7 @@ public class Police : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            animator.SetTrigger("Attack");
+            //animator.SetTrigger("Attack");
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
