@@ -16,7 +16,8 @@ public class LevelController : MonoBehaviour
     [Header("Game constant")]
     public Transform[] spawnPoint;
 
-
+    [Header("Object reference")]
+    public GameObject playerObj;
 
 
 
@@ -29,6 +30,8 @@ public class LevelController : MonoBehaviour
             LeanTween.value(this.gameObject, tempColor, Color.black, fadeSpd).setEase(LeanTweenType.easeOutQuint).setOnUpdate((Color val) =>
             {
                 fadeImg.color = val;
+            }).setOnComplete(()=> { 
+                Fade(false); 
             });
         }
         else
@@ -42,15 +45,41 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    //public void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Q))
-    //    {
-    //        Fade(true);
-    //    }
-    //    if (Input.GetKeyDown(KeyCode.W))
-    //    {
-    //        Fade(false);
-    //    }
-    //}
+    public void LevelRetry()
+    {
+        Fade(true);
+        LevelSetUp(currentLevelNumber);
+    }
+
+    public void LevelSetUp(int levelNumber)
+    {
+        switch (levelNumber)
+        {
+            case 1:
+
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+        }
+        LeanTween.delayedCall(0.5f, () => { PlayerSpawn(); });
+    }
+    public void PlayerSpawn()
+    {
+        playerObj.transform.position = spawnPoint[currentLevelNumber - 1].position;
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            LevelRetry();
+        }
+    }
 }
