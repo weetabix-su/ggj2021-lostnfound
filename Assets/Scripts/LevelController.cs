@@ -10,6 +10,16 @@ public class LevelController : MonoBehaviour
     public Image fadeImg;
     [SerializeField] [Range(0.5f, 4f)] float fadeSpd;
 
+    [Header("Level value")]
+    public int currentLevelNumber;
+
+    [Header("Game constant")]
+    public Transform[] spawnPoint;
+
+
+
+
+
     public void Fade(bool isFadeIn)
     {
         if (isFadeIn)
