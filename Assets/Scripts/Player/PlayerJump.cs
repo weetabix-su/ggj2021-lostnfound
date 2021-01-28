@@ -10,13 +10,14 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] [Range(1f, 10f)] float lowJumpMultiplier = 2f;
 
     Rigidbody rb;
-    float gravityScale = 1f;
+    PlayerGroundCheck gc;
     bool isJump;
 
     void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
+        gc = GetComponent<PlayerGroundCheck>();
     }
 
     void FixedUpdate()
@@ -29,12 +30,13 @@ public class PlayerJump : MonoBehaviour
 
         rb.AddForce(Physics.gravity * ((rb.velocity.y < 0) ? fallMultiplier : ((rb.velocity.y > 0 && !Input.GetButton("Jump")) ? lowJumpMultiplier : 1f)), ForceMode.Acceleration);
 
-        //if (rb.velocity.y < 0) rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        //else if (rb.velocity.y > 0 && !Input.GetButton("Jump")) rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        if (rb.velocity.y < 0) rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        else if (rb.velocity.y > 0 && !Input.GetButton("Jump")) rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump")) isJump = true;
+        if (gc == null && Input.GetButtonDown("Jump")) isJump = true;
+        else if (gc != null && gc.isGrounded && Input.GetButtonDown("Jump")) isJump = true;
     }
 }

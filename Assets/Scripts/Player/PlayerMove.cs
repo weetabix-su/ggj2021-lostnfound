@@ -6,15 +6,22 @@ public class PlayerMove : MonoBehaviour
 {
     [Header("Parameters")]
     [SerializeField][Range(0.1f, 20f)] float playerSpeed = 3f;
-    //[SerializeField] bool checkGround = true;
-    //[SerializeField] LayerMask filterGround;
+    [SerializeField] bool flipX;
+    [SerializeField] bool flipY;
+    [SerializeField] bool checkGround = false;
 
-    // Insert Raycast elements here
+    PlayerGroundCheck gc;
+
+    private void OnEnable()
+    {
+        gc = GetComponent<PlayerGroundCheck>();
+    }
 
     void FixedUpdate()
     {
+        // If PlayerGroundCheck is on the same gameObject and checkGround is enabled, check if player is grounded
+        if (gc != null && checkGround && !gc.isGrounded) return;
         // Moves player depending on Input Axis
-        // Ideally there should be a Raycast checking if player is on the ground
-        transform.position += new Vector3(Input.GetAxis("Horizontal"), transform.position.y, Input.GetAxis("Vertical")) * playerSpeed * Time.deltaTime;
+        transform.position += new Vector3(Input.GetAxis("Horizontal") * (flipX ? -1 : 1), transform.position.y, Input.GetAxis("Vertical") * (flipY ? -1 : 1)) * playerSpeed * Time.deltaTime;
     }
 }
