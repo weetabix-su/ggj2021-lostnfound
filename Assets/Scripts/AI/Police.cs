@@ -42,6 +42,21 @@ public class Police : MonoBehaviour
         agent.speed = movementSpeed;
     }
 
+    private void Start()
+    {
+        Queue.OnEnd += SetActived;
+    }
+
+    private void OnEnable()
+    {
+        actived = false;
+    }
+
+    private void OnDestroy()
+    {
+        Queue.OnEnd -= SetActived;
+    }
+
     private void Update()
     {
         if (actived)
@@ -90,8 +105,13 @@ public class Police : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            actived = true;
+            SetActived();
             GetComponent<BoxCollider>().enabled = false;
         }
+    }
+
+    private void SetActived()
+    {
+        actived = true;
     }
 }

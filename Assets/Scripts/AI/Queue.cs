@@ -19,6 +19,9 @@ public class Queue : MonoBehaviour
     [Space(5)]
     public GameObject destroyCollider;
 
+    public delegate void EndQueue();
+    public static event EndQueue OnEnd;
+
     void Start()
     {
         for (int i = 0; i < numberOfHumans; i++)
@@ -44,7 +47,11 @@ public class Queue : MonoBehaviour
     void StartQueue()
     {
         if (agents.Count <= 0)
+        {
+            if (OnEnd != null)
+                OnEnd();
             return;
+        }
         for (int i = 0; i < agents.Count; i++)
         {
             agents[i].SetDestination(locations[i]);

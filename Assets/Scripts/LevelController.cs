@@ -82,14 +82,7 @@ public class LevelController : MonoBehaviour
         {
             case 1:
                 {
-                    foreach (GameObject obj in scene1Go)
-                    {
-                        Destroy(obj);
-                    }
-                    //Spawn queue
-                    scene1Go.Add(Instantiate(queueGo, queueGoSpawnLocation, Quaternion.identity));
-                    //Spawn guard
-                    scene1Go.Add(Instantiate(guardGo, guardGoSpawnLocation, Quaternion.identity));
+                    LeanTween.delayedCall(0.6f, () => { LevelOneSetUp(); });
                 }
                 break;
             case 2:
@@ -106,6 +99,18 @@ public class LevelController : MonoBehaviour
     public void PlayerSpawn()
     {
         playerObj.transform.position = spawnPoint[currentLevelNumber - 1].position;
+    }
+
+    public void LevelOneSetUp()
+    {
+        foreach (GameObject obj in scene1Go)
+        {
+            Destroy(obj);
+        }
+        //Spawn queue
+        scene1Go.Add(Instantiate(queueGo, queueGoSpawnLocation, Quaternion.identity));
+        //Spawn guard
+        scene1Go.Add(Instantiate(guardGo, guardGoSpawnLocation, Quaternion.identity));
     }
 
 
