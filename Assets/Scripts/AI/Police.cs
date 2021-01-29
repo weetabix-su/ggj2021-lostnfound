@@ -91,6 +91,7 @@ public class Police : MonoBehaviour
         if (other.tag == "Player")
         {
             actived = true;
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 }

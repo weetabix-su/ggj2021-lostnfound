@@ -105,7 +105,6 @@ public class LevelController : MonoBehaviour
     }
     public void PlayerSpawn()
     {
-        Debug.Log("Called");
         playerObj.transform.position = spawnPoint[currentLevelNumber - 1].position;
     }
 
