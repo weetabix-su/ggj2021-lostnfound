@@ -22,6 +22,6 @@ public class PlayerMove : MonoBehaviour
         // If PlayerGroundCheck is on the same gameObject and checkGround is enabled, check if player is grounded
         if (gc != null && checkGround && !gc.isGrounded) return;
         // Moves player depending on Input Axis
-        transform.position += new Vector3(Input.GetAxis("Horizontal") * (flipX ? -1 : 1), transform.position.y, Input.GetAxis("Vertical") * (flipY ? -1 : 1)) * playerSpeed * Time.deltaTime;
+        transform.position += new Vector3(Input.GetAxis("Horizontal") * (flipX ? -1 : 1), 0, Input.GetAxis("Vertical") * (flipY ? -1 : 1)) * playerSpeed * Time.deltaTime;
     }
 }

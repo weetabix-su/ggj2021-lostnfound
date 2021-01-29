@@ -6,6 +6,7 @@ public class PlayerGroundCheck : MonoBehaviour
 {
     [SerializeField] LayerMask groundLayers;
     [SerializeField] [Range(0.1f, 5f)] float detectDistance = 0.1f;
+    [SerializeField] bool compareHeights = true;
     public bool isGrounded;
     Collider col;
 
@@ -17,7 +18,7 @@ public class PlayerGroundCheck : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        isGrounded = ((groundLayers.value & 1 << collision.gameObject.layer) == 1 << collision.gameObject.layer);
+        isGrounded = (((groundLayers.value & 1 << collision.gameObject.layer) == 1 << collision.gameObject.layer) && (compareHeights ? transform.position.y > collision.transform.position.y : true));
     }
 
     private void OnCollisionExit(Collision collision)
