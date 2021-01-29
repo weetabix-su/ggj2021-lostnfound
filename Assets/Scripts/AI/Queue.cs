@@ -36,12 +36,13 @@ public class Queue : MonoBehaviour
         }
         destroyCollider.SetActive(true);
         DestroyCollider.OnEnter += RemoveHuman;
-        StartQueue();
+        StartCollider.OnEnter += StartQueue;
     }
 
     private void OnDestroy()
     {
         DestroyCollider.OnEnter -= RemoveHuman;
+        StartCollider.OnEnter -= StartQueue;
     }
 
     void StartQueue()
