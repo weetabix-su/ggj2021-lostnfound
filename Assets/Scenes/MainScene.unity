@@ -1012,6 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 3
+  moveDirections: 0
   flipX: 0
   flipY: 0
   checkGround: 0
@@ -2678,7 +2679,7 @@ PrefabInstance:
     - target: {fileID: 5563350344142069465, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
       propertyPath: jumpVelocity
-      value: 7
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 5563350344142069465, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
@@ -2723,7 +2724,7 @@ PrefabInstance:
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.69
+      value: 11.8
       objectReference: {fileID: 0}
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
@@ -2764,6 +2765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563350344142069471, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5943023730576878819, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
