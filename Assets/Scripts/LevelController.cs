@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
+    public static LevelController instance;
+
     [Header("UI reference and parameter")]
     public Image fadeImg;
     [SerializeField] [Range(0.5f, 4f)] float fadeSpd;
@@ -30,6 +32,19 @@ public class LevelController : MonoBehaviour
     public Vector3 queueGoSpawnLocation;
     public GameObject guardGo;
     public Vector3 guardGoSpawnLocation;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.Log("FAILURE");
+            Destroy(gameObject);
+        }
+    }
 
     public void Fade(bool isFadeIn)
     {
@@ -90,6 +105,7 @@ public class LevelController : MonoBehaviour
     }
     public void PlayerSpawn()
     {
+        Debug.Log("Called");
         playerObj.transform.position = spawnPoint[currentLevelNumber - 1].position;
     }
 

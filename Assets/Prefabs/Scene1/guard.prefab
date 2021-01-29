@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 8640968787414979496}
   - component: {fileID: 8391167621910019529}
   - component: {fileID: 8391167621910019526}
+  - component: {fileID: 3043959830923124289}
   m_Layer: 0
   m_Name: guard
   m_TagString: Untagged
@@ -212,13 +213,14 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
+  actived: 0
   movementSpeed: 2
   animator: {fileID: 0}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   timeBetweenAttacks: 0
   sightRange: 15
-  attackRange: 2.5
+  attackRange: 1.47
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!195 &8391167621910019526
@@ -243,3 +245,16 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &3043959830923124289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391167621910019527}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 10}
+  m_Center: {x: -3, y: 1, z: 0}

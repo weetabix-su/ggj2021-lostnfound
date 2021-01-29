@@ -11,6 +11,8 @@ public class Police : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public bool actived = false;
+
 
     /// <summary>
     /// Should Be Implemented In Character, Inheriting
@@ -42,18 +44,21 @@ public class Police : MonoBehaviour
 
     private void Update()
     {
-        //Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        if (actived)
+        {
+            //Check for sight and attack range
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        //if (!_isDead)
-        //{
+            //if (!_isDead)
+            //{
             if (!playerInSightRange && !playerInAttackRange) Idling();
             if (playerInSightRange && !playerInAttackRange) ChasePlayer();
             if (playerInAttackRange && playerInSightRange) AttackPlayer();
-        //}
+            //}
 
-        //animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
+            //animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
+        }
     }
 
     private void Idling()
@@ -69,14 +74,8 @@ public class Police : MonoBehaviour
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
-
-        KillPlayer();
-    }
-
-    private void KillPlayer()
-    { 
-        
+        actived = false;
+        LevelController.instance.LevelRetry();
     }
 
     private void OnDrawGizmosSelected()
@@ -85,5 +84,13 @@ public class Police : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            actived = true;
+        }
     }
 }
