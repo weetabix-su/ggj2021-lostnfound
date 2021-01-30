@@ -28,6 +28,7 @@ public class Coin : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Debug.Log("4");
             LevelController.instance.LevelRetry();
             Destroy(this.gameObject);
         }

@@ -20,6 +20,9 @@ public class CheckPoint : MonoBehaviour
                 if(OnCheck!= null)
                     OnCheck();
             }
+
+            LevelController.instance.LevelSetUp(LevelController.instance.currentLevelNumber);
+            Destroy(gameObject);
         }
     }
 }

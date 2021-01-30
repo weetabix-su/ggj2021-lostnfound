@@ -36,6 +36,7 @@ public class PlayerGeneral : MonoBehaviour
         playerHealth--;
         if (playerHealth <= 0)
         {
+            Debug.Log("7");
             LevelController.instance.LevelRetry();
         }
         hpBar.value = playerHealth;

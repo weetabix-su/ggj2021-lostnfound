@@ -88,6 +88,7 @@ public class Police : MonoBehaviour
 
     private void AttackPlayer()
     {
+        Debug.Log("1");
         agent.SetDestination(transform.position);
         actived = false;
         LevelController.instance.LevelRetry();

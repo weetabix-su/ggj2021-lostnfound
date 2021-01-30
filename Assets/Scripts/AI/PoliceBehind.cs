@@ -78,8 +78,8 @@ public class PoliceBehind : MonoBehaviour
             //animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
         }
         else
-        {
-            transform.localPosition = new Vector3(reference.localPosition.x + 2, reference.localPosition.y, reference.localPosition.z);
+        {   if(reference!=null)
+                transform.localPosition = new Vector3(reference.localPosition.x + 2, reference.localPosition.y, reference.localPosition.z);
         }
     }
 
@@ -95,6 +95,7 @@ public class PoliceBehind : MonoBehaviour
 
     private void AttackPlayer()
     {
+        Debug.Log("2");
         agent.SetDestination(transform.position);
         actived = false;
         LevelController.instance.LevelRetry();

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class LevelController : MonoBehaviour
 {
     public static LevelController instance;
@@ -43,6 +42,8 @@ public class LevelController : MonoBehaviour
     public Vector3 coinGoSpawnLocation;
     public GameObject coinColliderGo;
     public Vector3 coinColliderGoSpawnLocation;
+    public GameObject coinControlGo;
+    public Vector3 coinControlGoSpawnLocation;
 
     [Header("End Scene reference")]
     public Animator boatAnim;
@@ -60,6 +61,12 @@ public class LevelController : MonoBehaviour
             Debug.Log("FAILURE");
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        Debug.Log("5");
+        LevelRetry();
     }
 
     public void Fade(bool isFadeIn, bool isEndGame)
@@ -105,6 +112,7 @@ public class LevelController : MonoBehaviour
 
     public void LevelRetry()
     {
+        Debug.Log("FML");
         Fade(true,false);
         LevelSetUp(currentLevelNumber);
     }
@@ -115,19 +123,12 @@ public class LevelController : MonoBehaviour
         {
             case 1:
                 {
-                    LeanTween.delayedCall(0.6f, () => { LevelOneSetUp(); });
+                    LeanTween.delayedCall(1.1f, () => { LevelOneSetUp(); });
                 }
                 break;
             case 2:
                 {
-                    foreach (GameObject obj in scene2Go)
-                    {
-                        Destroy(obj);
-                    }
-                    //Spawn coin
-                    scene2Go.Add(Instantiate(coinGo, coinGoSpawnLocation, Quaternion.Euler(0,90,0)));
-                    //Spawn coin fall collider
-                    scene2Go.Add(Instantiate(coinColliderGo, coinColliderGoSpawnLocation, Quaternion.identity));
+                    LeanTween.delayedCall(1.1f, () => { LevelTwoSetUp(); });
                 }
                 break;
             case 3:
@@ -137,7 +138,7 @@ public class LevelController : MonoBehaviour
             case 5:
                 break;
         }
-        LeanTween.delayedCall(0.5f, () => { PlayerSpawn(); });
+        LeanTween.delayedCall(1f, () => { PlayerSpawn(); });
     }
     public void PlayerSpawn()
     {
@@ -160,6 +161,23 @@ public class LevelController : MonoBehaviour
         scene1Go.Add(Instantiate(queueGo, queueGoSpawnLocation, Quaternion.identity));
     }
 
+    public void LevelTwoSetUp()
+    {
+        int idx = 0;
+        foreach (GameObject obj in scene2Go)
+        {
+            DestroyImmediate(obj);
+            idx++;
+        }
+        for (int i = 0; i < idx; i++)
+        {
+            scene2Go.RemoveAt(0);
+        }
+        scene2Go.Add(Instantiate(coinGo, coinGoSpawnLocation, Quaternion.Euler(0, 90, 0)));
+        scene2Go.Add(Instantiate(coinColliderGo, coinColliderGoSpawnLocation, Quaternion.identity));
+        scene2Go.Add(Instantiate(coinControlGo, coinControlGoSpawnLocation, Quaternion.identity));
+    }
+
 
     private void Update()
     {
@@ -173,6 +191,7 @@ public class LevelController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
+            Debug.Log("6");
             LevelRetry();
         }
         if (Input.GetKeyDown(KeyCode.Y))

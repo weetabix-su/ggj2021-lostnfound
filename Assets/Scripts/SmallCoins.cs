@@ -32,6 +32,7 @@ public class SmallCoins : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Started");
         counter = 0;
         SpawnNext();
         effect = Instantiate(effectPrefab, positionHolder[0].position, Quaternion.identity);
@@ -62,6 +63,7 @@ public class SmallCoins : MonoBehaviour
         }
         else
         {
+            Debug.Log("8");
             LevelController.instance.LevelRetry();
         }
     }
