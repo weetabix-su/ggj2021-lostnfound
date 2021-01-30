@@ -10,6 +10,9 @@ public class LevelController : MonoBehaviour
 
     [Header("UI reference and parameter")]
     public Image fadeImg;
+    public GameObject filmFadeUp;
+    public GameObject filmFadeDown;
+
     [SerializeField] [Range(0.5f, 4f)] float fadeSpd;
 
     [Header("Level value")]
@@ -78,6 +81,20 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    public void FilmFade(bool isFadeIn)
+    {
+        if (isFadeIn)
+        {
+            LeanTween.moveLocalY(filmFadeUp, 245 , 1.5f);
+            LeanTween.moveLocalY(filmFadeDown, -245, 1.5f);
+        }
+        else
+        {
+            LeanTween.moveLocalY(filmFadeUp, 185, 1.5f);
+            LeanTween.moveLocalY(filmFadeDown, -185, 1.5f);
+        }
+    }
+
     public void LevelRetry()
     {
         Fade(true);
@@ -137,9 +154,13 @@ public class LevelController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            LevelRetry();
+            FilmFade(true);
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            FilmFade(false);
         }
     }
 }
