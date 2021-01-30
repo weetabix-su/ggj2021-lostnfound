@@ -7063,6 +7063,7 @@ MonoBehaviour:
   jumpVelocity: 2
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
+  useAnimatorJumpTrigger: 1
 --- !u!114 &830802495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7081,6 +7082,7 @@ MonoBehaviour:
   flipX: 0
   flipY: 0
   checkGround: 0
+  useAnimatorTurnTrigger: 1
 --- !u!195 &830802496
 NavMeshAgent:
   m_ObjectHideFlags: 0

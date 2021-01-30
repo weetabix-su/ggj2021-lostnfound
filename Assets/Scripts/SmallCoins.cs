@@ -17,6 +17,8 @@ public class SmallCoins : MonoBehaviour
     public GameObject effectPrefab;
     public GameObject effect;
 
+    public GameObject currentCoin;
+
     public int counter = 0;
 
     private void Awake()
@@ -53,6 +55,8 @@ public class SmallCoins : MonoBehaviour
     private void OnDestroy()
     {
         CheckPoint.OnCheck -= Check;
+        Destroy(currentCoin);
+        Destroy(effect);
     }
 
     void Check()
@@ -70,13 +74,14 @@ public class SmallCoins : MonoBehaviour
 
     public void SpawnNext()
     {
+        Debug.Log("CALLED SHIT");
         if (counter == numberOfCoins)
             return;
         if (counter == 0)
         {
-            Instantiate(coinPrefab, positionHolder[counter++].position, Quaternion.Euler(0, 90, 0));
+            currentCoin = Instantiate(coinPrefab, positionHolder[counter++].position, Quaternion.Euler(0, 90, 0));
             return;
         }
-        Instantiate(coinPrefab, positionHolder[counter++].position, Quaternion.Euler(0,90,0));
+        currentCoin = Instantiate(coinPrefab, positionHolder[counter++].position, Quaternion.Euler(0,90,0));
     }
 }
