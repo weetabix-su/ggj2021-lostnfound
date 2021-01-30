@@ -7,12 +7,24 @@ public class DestroyCollider : MonoBehaviour
     public delegate void EnterTrigger();
     public static event EnterTrigger OnEnter;
 
+    public bool lastCalled = false;
+
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
-        if (OnEnter != null)
+        if (lastCalled == false)
         {
-            OnEnter();
+            if (OnEnter != null)
+            {
+                Debug.Log("DES");
+                OnEnter();
+                lastCalled = true;
+            }
+        }
+        else
+        {
+            lastCalled = false;
+            return;
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PoliceBehind : MonoBehaviour
+public class PoliceNew : MonoBehaviour
 {
     public NavMeshAgent agent;
 
@@ -13,7 +13,6 @@ public class PoliceBehind : MonoBehaviour
 
     public bool actived = false;
 
-    public Transform reference;
 
     /// <summary>
     /// Should Be Implemented In Character, Inheriting
@@ -76,11 +75,6 @@ public class PoliceBehind : MonoBehaviour
             //}
 
             //animator.SetFloat("Speed", agent.velocity.magnitude / agent.speed);
-        }
-        else
-        {
-            Debug.Log(reference.localPosition);
-            transform.localPosition = new Vector3(reference.localPosition.x + 2, reference.localPosition.y, reference.localPosition.z);
         }
     }
 
