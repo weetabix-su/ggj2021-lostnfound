@@ -34,6 +34,10 @@ public class PlayerGeneral : MonoBehaviour
     public void HealthReduction()
     {
         playerHealth--;
+        if (playerHealth <= 0)
+        {
+            LevelController.instance.LevelRetry();
+        }
         hpBar.value = playerHealth;
     }
 }
