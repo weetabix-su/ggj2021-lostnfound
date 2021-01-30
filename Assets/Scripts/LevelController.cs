@@ -44,6 +44,11 @@ public class LevelController : MonoBehaviour
     public GameObject coinColliderGo;
     public Vector3 coinColliderGoSpawnLocation;
 
+    [Header("End Scene reference")]
+    public Animator boatAnim;
+    public GameObject endGameCam;
+    public GameObject endGameText;
+
     private void Awake()
     {
         if (instance == null)
@@ -57,7 +62,7 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    public void Fade(bool isFadeIn)
+    public void Fade(bool isFadeIn, bool isEndGame)
     {
         if (isFadeIn)
         {
@@ -66,8 +71,11 @@ public class LevelController : MonoBehaviour
             LeanTween.value(this.gameObject, tempColor, Color.black, fadeSpd).setEase(LeanTweenType.easeOutQuint).setOnUpdate((Color val) =>
             {
                 fadeImg.color = val;
-            }).setOnComplete(()=> { 
-                Fade(false); 
+            }).setOnComplete(()=> {
+                if (!isEndGame)
+                    Fade(false, false);
+                else
+                    endGameText.SetActive(true);
             });
         }
         else
@@ -97,7 +105,7 @@ public class LevelController : MonoBehaviour
 
     public void LevelRetry()
     {
-        Fade(true);
+        Fade(true,false);
         LevelSetUp(currentLevelNumber);
     }
 
@@ -167,5 +175,18 @@ public class LevelController : MonoBehaviour
         {
             LevelRetry();
         }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            EndGame();
+        }
+    }
+
+    public void EndGame()
+    {
+        Destroy(playerObj);
+        endGameCam.SetActive(true);
+        boatAnim.enabled = true;
+        LeanTween.delayedCall(5f, () => { Fade(true, true); });
+        FilmFade(true);
     }
 }
