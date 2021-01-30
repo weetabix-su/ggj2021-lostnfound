@@ -9273,7 +9273,7 @@ MonoBehaviour:
   filmFadeUp: {fileID: 2046962594}
   filmFadeDown: {fileID: 988725615}
   fadeSpd: 3
-  currentLevelNumber: 2
+  currentLevelNumber: 3
   spawnPoint:
   - {fileID: 1152913028}
   - {fileID: 1184885409}
@@ -9352,7 +9352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.04
+      value: -19.46
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_LocalPosition.z
