@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Queue : MonoBehaviour
 {
+    public static Queue instance;
+
     [Header("Settings")]
     public float waitingTime;
     public int numberOfHumans;
@@ -22,6 +24,18 @@ public class Queue : MonoBehaviour
     public delegate void EndQueue();
     public static event EndQueue OnEnd;
 
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Debug.Log("FAILURE");
+            Destroy(gameObject);
+        }
+    }
+
+
     void Start()
     {
         for (int i = 0; i < numberOfHumans; i++)
@@ -33,6 +47,10 @@ public class Queue : MonoBehaviour
         for (int i = numberOfHumans; i < numberOfHumans * 2; i++)
         {
             locations.Add(transform.GetChild(i).transform.position);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            locations.Add(transform.GetChild(numberOfHumans * 2 + i).transform.position);
         }
         destroyCollider.SetActive(true);
         DestroyCollider.OnEnter += RemoveHuman;
@@ -67,7 +85,19 @@ public class Queue : MonoBehaviour
 
     void RemoveHuman()
     {
-        humans.RemoveAt(0);
-        agents.RemoveAt(0);
+        if (humans.Count > 0)
+            humans.RemoveAt(0);
+        if (agents.Count > 0)
+            agents.RemoveAt(0);
+    }
+
+    public List<Vector3> GetLocations()
+    {
+        List<Vector3> temp = new List<Vector3>();
+        for (int i = agents.Count; i < agents.Count + 3; i++)
+        {
+            temp.Add(locations[i]);
+        }
+        return temp;
     }
 }
