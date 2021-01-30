@@ -7908,16 +7908,8 @@ MonoBehaviour:
   playerObj: {fileID: 533165294}
   checkPointRef: []
   scene1Go: []
-  queueGo: {fileID: 2464835543401585284, guid: 82a28f47dac306f4b9b1e65b7a239366, type: 3}
-  queueGoSpawnLocation: {x: 0.01, y: 0.06, z: -0.38}
-  guardGo: {fileID: 8391167621910019527, guid: ebef49dd11ecf1648a2fb166ac559341, type: 3}
-  guardGoSpawnLocation: {x: -10.63, y: 0.08343939, z: 8.77}
-  queue2Go: {fileID: 8073258311834440081, guid: 49b60fc18b9d2bb4ca0e91236d26052d,
-    type: 3}
-  queue2GoSpawnLocation: {x: 27.58, y: -0.03, z: 3.97}
-  guard2Go: {fileID: 3099688742750825813, guid: 860f853dbb42b2d4e92446dd6a34abcb,
-    type: 3}
-  guard2GoSpawnLocation: {x: 24.84, y: 0.01080526, z: 13.98928}
+  queueGo: {fileID: 6253214985705483816, guid: e50dd3faac2b3c249ab8e78e8cc6f405, type: 3}
+  queueGoSpawnLocation: {x: -0.07, y: 0, z: 4.21}
   scene2Go: []
   coinGo: {fileID: 5716495715732963029, guid: 96868c6b0f343834ba473e1e466292ee, type: 3}
   coinGoSpawnLocation: {x: -47.59, y: 28.58, z: 13.75}
@@ -7931,8 +7923,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197357645}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.84, y: 0.01080526, z: 13.9892845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: 0, z: 4.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -23265,17 +23257,17 @@ PrefabInstance:
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -249.07
+      value: 18.28
       objectReference: {fileID: 0}
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.26
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.26
+      value: 12.83
       objectReference: {fileID: 0}
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}

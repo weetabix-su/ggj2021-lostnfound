@@ -16,7 +16,6 @@ public class DestroyCollider : MonoBehaviour
         {
             if (OnEnter != null)
             {
-                Debug.Log("DES");
                 OnEnter();
                 lastCalled = true;
             }

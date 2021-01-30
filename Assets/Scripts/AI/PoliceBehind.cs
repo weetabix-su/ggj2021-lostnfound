@@ -79,7 +79,6 @@ public class PoliceBehind : MonoBehaviour
         }
         else
         {
-            Debug.Log(reference.localPosition);
             transform.localPosition = new Vector3(reference.localPosition.x + 2, reference.localPosition.y, reference.localPosition.z);
         }
     }

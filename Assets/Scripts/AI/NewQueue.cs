@@ -23,6 +23,9 @@ public class NewQueue : MonoBehaviour
     [Space(5)]
     public Light light;
 
+    public bool activated = false;
+    public float timer = 0f;
+
     public delegate void EndQueue();
     public static event EndQueue OnEnd;
 
@@ -39,6 +42,8 @@ public class NewQueue : MonoBehaviour
 
     void Start()
     {
+        activated = false;
+        timer = 0f;
         for (int i = 0; i < numberOfHumans; i++)
         {
             humans.Add(transform.GetChild(i));
@@ -55,6 +60,16 @@ public class NewQueue : MonoBehaviour
         DestroyCollider.OnEnter += RemoveHuman;
         //StartCollider.OnEnter += StartQueue;
         //tartWait();
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer > 5f && !activated)
+        {
+            activated = true;
+            StartWait();
+        }
     }
 
     private void OnDestroy()
@@ -97,7 +112,6 @@ public class NewQueue : MonoBehaviour
 
     void RemoveHuman()
     {
-        Debug.Log("Called");
         if (humans.Count > 0)
             humans.RemoveAt(0);
         if (agents.Count > 0)
@@ -118,7 +132,8 @@ public class NewQueue : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            StartWait();
+            if(!activated)
+                StartWait();
         }
     }
 }

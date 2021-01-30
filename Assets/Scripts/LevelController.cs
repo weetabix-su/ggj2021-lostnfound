@@ -30,12 +30,6 @@ public class LevelController : MonoBehaviour
     //Ref
     public GameObject queueGo;
     public Vector3 queueGoSpawnLocation;
-    public GameObject guardGo;
-    public Vector3 guardGoSpawnLocation;
-    public GameObject queue2Go;
-    public Vector3 queue2GoSpawnLocation;
-    public GameObject guard2Go;
-    public Vector3 guard2GoSpawnLocation;
 
 
     [Header("Scene 2 reference")]
@@ -137,15 +131,7 @@ public class LevelController : MonoBehaviour
         {
             scene1Go.RemoveAt(0);
         }
-        //Spawn queue
         scene1Go.Add(Instantiate(queueGo, queueGoSpawnLocation, Quaternion.identity));
-        //Spawn guard
-        scene1Go.Add(Instantiate(guardGo, guardGoSpawnLocation, Quaternion.identity));
-        //Spawn queue
-        scene1Go.Add(Instantiate(queue2Go, queue2GoSpawnLocation, Quaternion.identity));
-        //Spawn guard
-        scene1Go.Add(Instantiate(guard2Go, guard2GoSpawnLocation, Quaternion.identity));
-
     }
 
 
