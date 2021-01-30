@@ -6,15 +6,27 @@ using UnityEngine;
 
 public class PlayerSFX : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("One-Shot Clips")]
+    [SerializeField] AudioClip[] walkingClips;
+    [SerializeField] AudioClip[] turningClips;
+    [SerializeField] AudioClip[] jumpingClips;
+    [SerializeField] AudioClip[] landingClips;
+
+    AudioSource sfxSource;
+
+    void OnEnable()
     {
-        
+        sfxSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void playOneShot(AudioClip[] clips)
     {
-        
+        if (clips.Length <= 0) return;
+        sfxSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
     }
+
+    public void Walk() => playOneShot(walkingClips);
+    public void Turn() => playOneShot(turningClips);
+    public void Jump() => playOneShot(jumpingClips);
+    public void Land() => playOneShot(landingClips);
 }

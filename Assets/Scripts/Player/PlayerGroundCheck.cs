@@ -10,6 +10,11 @@ public class PlayerGroundCheck : MonoBehaviour
     public bool isGrounded;
     Collider col;
 
+    public bool groundVerify(GameObject g)
+    {
+        return (groundLayers.value & 1 << g.layer) == 1 << g.layer && (compareHeights ? transform.position.y > g.transform.position.y : true);
+    }
+
     void OnEnable()
     {
         isGrounded = false;

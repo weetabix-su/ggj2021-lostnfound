@@ -10,13 +10,17 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] [Range(1f, 10f)] float lowJumpMultiplier = 2f;
 
     Rigidbody rb;
+    Collider col;
     PlayerGroundCheck gc;
+    PlayerSFX sfx;
     bool isJump;
 
     void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
+        col = GetComponent<Collider>();
+        sfx = GetComponent<PlayerSFX>();
         gc = GetComponent<PlayerGroundCheck>();
     }
 
@@ -25,6 +29,7 @@ public class PlayerJump : MonoBehaviour
         if (isJump)
         {
             rb.AddForce(Vector2.up * jumpVelocity, ForceMode.Impulse);
+            if (sfx != null) sfx.Jump();
             isJump = false;
         }
 
@@ -38,5 +43,10 @@ public class PlayerJump : MonoBehaviour
     {
         if (gc == null && Input.GetButtonDown("Jump")) isJump = true;
         else if (gc != null && gc.isGrounded && Input.GetButtonDown("Jump")) isJump = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (gc != null && gc.groundVerify(collision.gameObject) && sfx != null) sfx.Land();
     }
 }

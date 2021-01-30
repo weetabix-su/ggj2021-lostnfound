@@ -547,12 +547,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5563350344142069470}
   - component: {fileID: 5563350344142069471}
+  - component: {fileID: 5759089745855240999}
   - component: {fileID: 5563350344142069468}
   - component: {fileID: 5190004443284038613}
   - component: {fileID: 5563350344142069465}
   - component: {fileID: 1932094358921457760}
   - component: {fileID: 5943023730576878819}
   - component: {fileID: 533165295}
+  - component: {fileID: 1107358721036620206}
   m_Layer: 9
   m_Name: PlayerObject
   m_TagString: Player
@@ -593,6 +595,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!82 &5759089745855240999
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563350344142069469}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &5563350344142069468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,6 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 4.5
+  stepsPerMinute: 120
   moveDirections: 0
   flipX: 1
   flipY: 1
@@ -683,3 +782,33 @@ MonoBehaviour:
   snapPosition: {fileID: 0}
   playerHealth: 100
   hpBar: {fileID: 1437503899}
+--- !u!114 &1107358721036620206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563350344142069469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854175670dfc67840825d304ac8bea17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingClips:
+  - {fileID: 8300000, guid: 2cbe7d8be88457945bd5e8e7a01e625e, type: 3}
+  - {fileID: 8300000, guid: 350a3a76e032ea04e87634005b2dbb67, type: 3}
+  - {fileID: 8300000, guid: 24e5130027317b444998f9a9951a810d, type: 3}
+  - {fileID: 8300000, guid: 1093ec39d3497da418ce590a4c2ece4f, type: 3}
+  - {fileID: 8300000, guid: a10bf094c676dbf42a5d340dc3d68871, type: 3}
+  - {fileID: 8300000, guid: f7f60aaeed80f944ea475f8526834530, type: 3}
+  turningClips:
+  - {fileID: 8300000, guid: 6a16192f7f49a3d488a92d33a9335f0c, type: 3}
+  - {fileID: 8300000, guid: cc694943f482e6c40bcf6f61b0370a59, type: 3}
+  jumpingClips:
+  - {fileID: 8300000, guid: e18427959c0542e4a8ee1ce5625351bb, type: 3}
+  - {fileID: 8300000, guid: 3f2441263d713c74d8e67b737e7e7e5f, type: 3}
+  landingClips:
+  - {fileID: 8300000, guid: e6583179ddd5c5e4aa1628c1633d9c9d, type: 3}
+  - {fileID: 8300000, guid: a56b4261c70c8a045a086729716d2e36, type: 3}
+  - {fileID: 8300000, guid: c4ebac3cc0f35eb448cb21b6b7b47012, type: 3}
+  - {fileID: 8300000, guid: 7781101a625793b48ab64a254bc0e184, type: 3}
