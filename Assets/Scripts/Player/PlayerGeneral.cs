@@ -8,12 +8,12 @@ public class PlayerGeneral : MonoBehaviour
 
     private void OnEnable()
     {
-        CheckPoint.OnCheck += SnapLocation;
+        SmallCoins.Picked += SnapLocation;
     }
 
     private void OnDestroy()
     {
-        CheckPoint.OnCheck -= SnapLocation;
+        SmallCoins.Picked -= SnapLocation;
     }
 
     void SnapLocation()
