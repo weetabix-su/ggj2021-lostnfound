@@ -133,6 +133,7 @@ public class LevelController : MonoBehaviour
     }
     public void PlayerSpawn()
     {
+        playerObj.GetComponent<PlayerGeneral>().playerHealth = 100;
         playerObj.transform.position = spawnPoint[currentLevelNumber - 1].position;
     }
 
