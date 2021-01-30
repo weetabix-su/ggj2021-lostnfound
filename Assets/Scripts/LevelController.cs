@@ -33,6 +33,15 @@ public class LevelController : MonoBehaviour
     public GameObject guardGo;
     public Vector3 guardGoSpawnLocation;
 
+    [Header("Scene 2 reference")]
+    //Store
+    public List<GameObject> scene2Go;
+    //Ref
+    public GameObject coinGo;
+    public Vector3 coinGoSpawnLocation;
+    public GameObject coinColliderGo;
+    public Vector3 coinColliderGoSpawnLocation;
+
     private void Awake()
     {
         if (instance == null)
@@ -86,6 +95,16 @@ public class LevelController : MonoBehaviour
                 }
                 break;
             case 2:
+                {
+                    foreach (GameObject obj in scene2Go)
+                    {
+                        Destroy(obj);
+                    }
+                    //Spawn coin
+                    scene2Go.Add(Instantiate(coinGo, coinGoSpawnLocation, Quaternion.Euler(0,90,0)));
+                    //Spawn coin fall collider
+                    scene2Go.Add(Instantiate(coinColliderGo, coinColliderGoSpawnLocation, Quaternion.identity));
+                }
                 break;
             case 3:
                 break;
