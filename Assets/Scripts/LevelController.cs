@@ -32,6 +32,8 @@ public class LevelController : MonoBehaviour
     //Ref
     public GameObject queueGo;
     public Vector3 queueGoSpawnLocation;
+    public GameObject dreamGo;
+    public Vector3 dreamGoSpawnLocation;
 
 
     [Header("Scene 2 reference")]
@@ -159,6 +161,7 @@ public class LevelController : MonoBehaviour
             scene1Go.RemoveAt(0);
         }
         scene1Go.Add(Instantiate(queueGo, queueGoSpawnLocation, Quaternion.identity));
+        scene1Go.Add(Instantiate(dreamGo, dreamGoSpawnLocation, Quaternion.identity));
     }
 
     public void LevelTwoSetUp()
