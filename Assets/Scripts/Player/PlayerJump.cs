@@ -8,7 +8,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] [Range(1f, 10f)] float jumpVelocity = 2.5f;
     [SerializeField] [Range(1f, 10f)] float fallMultiplier = 2.5f;
     [SerializeField] [Range(1f, 10f)] float lowJumpMultiplier = 2f;
-    [SerializeField] bool useAnimatorJumpTrigger = true;
+    [SerializeField] bool useAnimatorJumpTrigger = false;
 
     Rigidbody rb;
     Collider col;

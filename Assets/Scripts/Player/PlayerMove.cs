@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] bool flipX;
     [SerializeField] bool flipY;
     [SerializeField] bool checkGround = true;
-    [SerializeField] bool useAnimatorTurnTrigger = true;
+    [SerializeField] bool useAnimatorTurnTrigger = false;
 
     float lastAxis;
 
