@@ -20,10 +20,14 @@ public class GodDialogue : MonoBehaviour
     [Header("Reference for developer")]
     public Queue<string> currentQueue = new Queue<string>();
 
+    public PlayerMove playerMove;
+
     public void OnTriggerEnter(Collider other)
     {
         if (isTriggered == false && other.tag == "Player")
         {
+            playerMove = other.transform.parent.GetComponent<PlayerMove>();
+            playerMove.enabled = false;
             isTriggered = true;
             LevelController.instance.FilmFade(true);
             DialogueSetUp();
@@ -65,7 +69,9 @@ public class GodDialogue : MonoBehaviour
         }
         else
         {
+            LevelController.instance.FilmFade(false);
             isPlaying = false;
+            playerMove.GetComponent<PlayerMove>().enabled = true;
             Debug.Log("There is no sentence left.");
         }
     }

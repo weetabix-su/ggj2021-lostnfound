@@ -8322,7 +8322,6 @@ GameObject:
   - component: {fileID: 1306879775}
   - component: {fileID: 1306879774}
   - component: {fileID: 1306879773}
-  - component: {fileID: 1306879776}
   - component: {fileID: 1306879777}
   m_Layer: 0
   m_Name: MiddleGodTrigger
@@ -8405,20 +8404,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306879771}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1306879776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306879771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeda45b1eb04e6141a5240143810ba0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTriggered: 0
-  isFilmPerspective: 1
 --- !u!114 &1306879777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8440,6 +8425,7 @@ MonoBehaviour:
   isPlaying: 0
   isTriggered: 0
   tmp: {fileID: 1006632534}
+  playerMove: {fileID: 0}
 --- !u!1 &1338093052
 GameObject:
   m_ObjectHideFlags: 0
@@ -23720,7 +23706,7 @@ PrefabInstance:
     - target: {fileID: 5563350344142069468, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
       propertyPath: playerSpeed
-      value: 3.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5563350344142069469, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
