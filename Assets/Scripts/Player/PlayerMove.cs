@@ -15,6 +15,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] bool checkGround = false;
 
     PlayerGroundCheck gc;
+    PlayerAnimControl ac;
     PlayerSFX sfx;
 
     float stepClock;
@@ -22,6 +23,7 @@ public class PlayerMove : MonoBehaviour
     private void OnEnable()
     {
         gc = GetComponent<PlayerGroundCheck>();
+        ac = GetComponent<PlayerAnimControl>();
         sfx = GetComponent<PlayerSFX>();
         stepClock = 0f;
     }
@@ -32,6 +34,8 @@ public class PlayerMove : MonoBehaviour
         //if (gc != null && checkGround && !gc.isGrounded) return;
         // Moves player depending on Input Axis
         transform.position += new Vector3(moveDirections != moveMode.yOnly ? Input.GetAxis("Horizontal") * (flipX ? -1 : 1) : 0, 0, moveDirections != moveMode.xOnly ? Input.GetAxis("Vertical") * (flipY ? -1 : 1) : 0) * playerSpeed * Time.deltaTime;
+        // Updates AnimatorControl based on 1D movement
+        if (ac != null) ac.MoveVector(moveDirections != moveMode.twoDimensional ? Input.GetAxis(moveDirections == moveMode.xOnly ? "Horizontal" : "Vertical") : 0);
     }
 
     void Update()
