@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerGroundCheck : MonoBehaviour
 {
     [SerializeField] LayerMask groundLayers;
-    [SerializeField] [Range(0.1f, 5f)] float detectDistance = 0.1f;
+    [SerializeField] [Range(0.1f, 5f)] float detectDistance = 0.4f;
     [SerializeField] bool compareHeights = true;
     public bool isGrounded;
     Collider col;
