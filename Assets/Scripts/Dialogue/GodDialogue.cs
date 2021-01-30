@@ -12,12 +12,23 @@ public class GodDialogue : MonoBehaviour
     public float fadeSpeed;
     public float interval;
     public bool isPlaying;
+    public bool isTriggered;
 
     [Header("Object reference")]
     public TMP_Text tmp;
 
     [Header("Reference for developer")]
     public Queue<string> currentQueue = new Queue<string>();
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (isTriggered == false && other.tag == "Player")
+        {
+            isTriggered = true;
+            LevelController.instance.FilmFade(true);
+            DialogueSetUp();
+        }
+    }
 
     public void DialogueSetUp()
     {

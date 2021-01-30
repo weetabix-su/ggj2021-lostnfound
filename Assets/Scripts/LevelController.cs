@@ -83,15 +83,15 @@ public class LevelController : MonoBehaviour
 
     public void FilmFade(bool isFadeIn)
     {
-        if (isFadeIn)
+        if (!isFadeIn)
         {
-            LeanTween.moveLocalY(filmFadeUp, 245 , 1.5f);
-            LeanTween.moveLocalY(filmFadeDown, -245, 1.5f);
+            LeanTween.moveLocalY(filmFadeUp, 548 , 1.5f);
+            LeanTween.moveLocalY(filmFadeDown, -548, 1.5f);
         }
         else
         {
-            LeanTween.moveLocalY(filmFadeUp, 185, 1.5f);
-            LeanTween.moveLocalY(filmFadeDown, -185, 1.5f);
+            LeanTween.moveLocalY(filmFadeUp, 398, 1.5f);
+            LeanTween.moveLocalY(filmFadeDown, -398, 1.5f);
         }
     }
 

@@ -39,6 +39,7 @@ public class WaveManager : MonoBehaviour
     {
         if (other.tag == "Player")
         Debug.Log("ggg");
+        LevelController.instance.LevelRetry();
     }
 
 }
