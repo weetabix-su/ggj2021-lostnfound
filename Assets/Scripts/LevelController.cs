@@ -163,5 +163,9 @@ public class LevelController : MonoBehaviour
         {
             FilmFade(false);
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            LevelRetry();
+        }
     }
 }
