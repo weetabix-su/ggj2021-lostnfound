@@ -34,4 +34,11 @@ public class WaveManager : MonoBehaviour
     {
         return amplitude * Mathf.Sin(_x / length + offset);
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        Debug.Log("ggg");
+    }
+
 }
