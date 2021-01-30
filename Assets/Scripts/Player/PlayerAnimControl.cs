@@ -22,12 +22,12 @@ public class PlayerAnimControl : MonoBehaviour
         CharacterAnimator.SetFloat("move", Mathf.Abs(vector));
     }
 
-    void Jump()
+    public void Jump()
     {
         if (CharacterAnimator == null) return;
         CharacterAnimator.SetTrigger("jump");
     }
-    void Turn()
+    public void Turn()
     {
         if (CharacterAnimator == null) return;
         CharacterAnimator.SetTrigger("turn");

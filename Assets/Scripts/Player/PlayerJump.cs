@@ -8,10 +8,12 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] [Range(1f, 10f)] float jumpVelocity = 2.5f;
     [SerializeField] [Range(1f, 10f)] float fallMultiplier = 2.5f;
     [SerializeField] [Range(1f, 10f)] float lowJumpMultiplier = 2f;
+    [SerializeField] bool useAnimatorJumpTrigger = true;
 
     Rigidbody rb;
     Collider col;
     PlayerGroundCheck gc;
+    PlayerAnimControl ac;
     PlayerSFX sfx;
     bool isJump;
 
@@ -22,6 +24,7 @@ public class PlayerJump : MonoBehaviour
         col = GetComponent<Collider>();
         sfx = GetComponent<PlayerSFX>();
         gc = GetComponent<PlayerGroundCheck>();
+        ac = GetComponent<PlayerAnimControl>();
     }
 
     void FixedUpdate()
@@ -29,6 +32,7 @@ public class PlayerJump : MonoBehaviour
         if (isJump)
         {
             rb.AddForce(Vector2.up * jumpVelocity, ForceMode.Impulse);
+            if (ac != null && useAnimatorJumpTrigger) ac.Jump();
             if (sfx != null) sfx.Jump();
             isJump = false;
         }

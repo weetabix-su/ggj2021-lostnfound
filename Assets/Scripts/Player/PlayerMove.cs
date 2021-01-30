@@ -12,7 +12,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] moveMode moveDirections;
     [SerializeField] bool flipX;
     [SerializeField] bool flipY;
-    [SerializeField] bool checkGround = false;
+    [SerializeField] bool checkGround = true;
+    [SerializeField] bool useAnimatorTurnTrigger = true;
+
+    float lastAxis;
 
     PlayerGroundCheck gc;
     PlayerAnimControl ac;
@@ -61,5 +64,12 @@ public class PlayerMove : MonoBehaviour
             }
             else if (stepClock != 0f) stepClock = 0f;
         }
+        // Attempts trigger of ac.Turn()
+        if (moveDirections != moveMode.twoDimensional && ac != null && useAnimatorTurnTrigger)
+        {
+            if ((Input.GetAxis(moveDirections == moveMode.xOnly ? "Horizontal" : "Vertical") > 0 && lastAxis < 0) || (Input.GetAxis(moveDirections == moveMode.xOnly ? "Horizontal" : "Vertical") < 0 && lastAxis > 0)) ac.Turn();
+        }
+        // Sets lastAxis Value
+        lastAxis = moveDirections == moveMode.twoDimensional ? 0 : Input.GetAxis(moveDirections == moveMode.xOnly ? "Horizontal" : "Vertical");
     }
 }
