@@ -25556,12 +25556,12 @@ PrefabInstance:
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.58
+      value: -229.9
       objectReference: {fileID: 0}
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: -18.7
       objectReference: {fileID: 0}
     - target: {fileID: 5563350344142069470, guid: 34fb1169b46acbe4a9bfddcd2fdc85ef,
         type: 3}
@@ -38055,6 +38055,7 @@ GameObject:
   - component: {fileID: 3352185781050710453}
   - component: {fileID: 2503381764199825209}
   - component: {fileID: 846008440210323647}
+  - component: {fileID: 980977928800537624}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_49
   m_TagString: Untagged
@@ -38062,6 +38063,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &980977928800537624
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980977928800537623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052477084}
 --- !u!33 &983168864464435983
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43986,6 +44000,7 @@ GameObject:
   - component: {fileID: 443711304705561554}
   - component: {fileID: 3066670388153142343}
   - component: {fileID: 2238592042414830381}
+  - component: {fileID: 1539477682313906672}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_46
   m_TagString: Untagged
@@ -43993,6 +44008,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1539477682313906672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539477682313906671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052484535}
 --- !u!4 &1543260674231111345
 Transform:
   m_ObjectHideFlags: 0
@@ -54590,6 +54618,7 @@ GameObject:
   - component: {fileID: 1508512895821573390}
   - component: {fileID: 6622184556448092859}
   - component: {fileID: 6439308757478524533}
+  - component: {fileID: 2655052866211711313}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_44
   m_TagString: Untagged
@@ -54597,6 +54626,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2655052866211711313
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655052866211711312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052477084}
 --- !u!23 &2658105430130902675
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57551,6 +57593,7 @@ GameObject:
   - component: {fileID: 7428673018376728185}
   - component: {fileID: 4394930734114429947}
   - component: {fileID: 8568073735824600881}
+  - component: {fileID: 2956675537357765442}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_42
   m_TagString: Untagged
@@ -57558,6 +57601,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2956675537357765442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956675537357765441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052477084}
 --- !u!23 &2957417322138125844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60694,6 +60750,7 @@ GameObject:
   - component: {fileID: 8291166163264267881}
   - component: {fileID: 737126103547202613}
   - component: {fileID: 3028654552032913993}
+  - component: {fileID: 3274432805854228312}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_63
   m_TagString: Untagged
@@ -60701,6 +60758,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3274432805854228312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274432805854228311}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.0051936195, z: -0.000052477084}
 --- !u!33 &3280495574488836029
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -65467,6 +65537,7 @@ GameObject:
   - component: {fileID: 553240452753215959}
   - component: {fileID: 3589005323240953451}
   - component: {fileID: 4659335074417507599}
+  - component: {fileID: 3709956717241653592}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_59
   m_TagString: Untagged
@@ -65474,6 +65545,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3709956717241653592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3709956717241653591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731658, y: -0.0051936195, z: -0.000052477084}
 --- !u!1 &3716540937180377849
 GameObject:
   m_ObjectHideFlags: 0
@@ -75942,6 +76026,7 @@ GameObject:
   - component: {fileID: 7643153364844140229}
   - component: {fileID: 7857733233537957899}
   - component: {fileID: 842373691231066114}
+  - component: {fileID: 4854878964775858884}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_47
   m_TagString: Untagged
@@ -75949,6 +76034,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4854878964775858884
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4854878964775858883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052484535}
 --- !u!4 &4855716365250021519
 Transform:
   m_ObjectHideFlags: 0
@@ -77104,6 +77202,7 @@ GameObject:
   - component: {fileID: 544332717782836242}
   - component: {fileID: 6970359355073216297}
   - component: {fileID: 412832493108784456}
+  - component: {fileID: 4968635246495019865}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_66
   m_TagString: Untagged
@@ -77111,6 +77210,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4968635246495019865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968635246495019864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.0051936195, z: -0.000052484535}
 --- !u!1 &4973443834483173529
 GameObject:
   m_ObjectHideFlags: 0
@@ -79186,6 +79298,7 @@ GameObject:
   - component: {fileID: 1536940803358637923}
   - component: {fileID: 6132810736116426263}
   - component: {fileID: 4063919158250326954}
+  - component: {fileID: 5206315102210686926}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_43
   m_TagString: Untagged
@@ -79193,6 +79306,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5206315102210686926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206315102210686925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052477084}
 --- !u!23 &5209262600554794717
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -82350,6 +82476,7 @@ GameObject:
   - component: {fileID: 6829033659108859904}
   - component: {fileID: 4910949119317721288}
   - component: {fileID: 1569530453083993819}
+  - component: {fileID: 5600509221155836749}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_45
   m_TagString: Untagged
@@ -82357,6 +82484,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5600509221155836749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600509221155836748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052484535}
 --- !u!33 &5601502347830659350
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -83441,6 +83581,7 @@ GameObject:
   - component: {fileID: 6627599781387399523}
   - component: {fileID: 8147336010951559847}
   - component: {fileID: 499258957293232997}
+  - component: {fileID: 5732447012682523387}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_56
   m_TagString: Untagged
@@ -83448,6 +83589,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5732447012682523387
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732447012682523386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.0051936195, z: -0.000052484535}
 --- !u!33 &5732909136274489451
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -84702,6 +84856,7 @@ GameObject:
   - component: {fileID: 7009097041675966098}
   - component: {fileID: 3917003380678927433}
   - component: {fileID: 781090162006564171}
+  - component: {fileID: 5870526431487569289}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_52
   m_TagString: Untagged
@@ -84709,6 +84864,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5870526431487569289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870526431487569288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.0051936195, z: -0.000052477084}
 --- !u!33 &5879719524992511094
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -87843,6 +88011,7 @@ GameObject:
   - component: {fileID: 3725892670477683407}
   - component: {fileID: 4186666531046316989}
   - component: {fileID: 3127916196400191052}
+  - component: {fileID: 6262186486165949188}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_62
   m_TagString: Untagged
@@ -87850,6 +88019,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6262186486165949188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6262186486165949187}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731658, y: -0.0051936195, z: -0.000052477084}
 --- !u!1 &6267768358506104811
 GameObject:
   m_ObjectHideFlags: 0
@@ -89202,6 +89384,7 @@ GameObject:
   - component: {fileID: 928228987359650361}
   - component: {fileID: 3686860663258325659}
   - component: {fileID: 6941048119289455392}
+  - component: {fileID: 6418994785225395161}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_55
   m_TagString: Untagged
@@ -89209,6 +89392,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6418994785225395161
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418994785225395160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.0051936195, z: -0.000052477084}
 --- !u!1 &6422594619332279075
 GameObject:
   m_ObjectHideFlags: 0
@@ -90573,6 +90769,7 @@ GameObject:
   - component: {fileID: 2066166142202062847}
   - component: {fileID: 1870893356936578771}
   - component: {fileID: 8772514012270437199}
+  - component: {fileID: 6552146585080236154}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_50
   m_TagString: Untagged
@@ -90580,6 +90777,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6552146585080236154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6552146585080236153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052477084}
 --- !u!23 &6556191124856916215
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -92574,6 +92784,7 @@ GameObject:
   - component: {fileID: 6341105050614048007}
   - component: {fileID: 4654796074002020956}
   - component: {fileID: 6820998743226740972}
+  - component: {fileID: 6710553858770617435}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_51
   m_TagString: Untagged
@@ -92581,6 +92792,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6710553858770617435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710553858770617434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052469633}
 --- !u!23 &6726061747279831073
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97765,6 +97989,7 @@ GameObject:
   - component: {fileID: 6608756879452947253}
   - component: {fileID: 5315391716470641785}
   - component: {fileID: 2623519381994077613}
+  - component: {fileID: 7334951581689175634}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_61
   m_TagString: Untagged
@@ -97772,6 +97997,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7334951581689175634
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7334951581689175633}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731658, y: -0.0051936195, z: -0.000052484535}
 --- !u!1 &7345465267735978318
 GameObject:
   m_ObjectHideFlags: 0
@@ -97819,6 +98057,7 @@ GameObject:
   - component: {fileID: 2632360671948330962}
   - component: {fileID: 2206361072790390675}
   - component: {fileID: 2312369737584446477}
+  - component: {fileID: 7348185886725722303}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_48
   m_TagString: Untagged
@@ -97826,6 +98065,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7348185886725722303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348185886725722302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.00519356, z: -0.000052477084}
 --- !u!1 &7358673475437408641
 GameObject:
   m_ObjectHideFlags: 0
@@ -98034,6 +98286,7 @@ GameObject:
   - component: {fileID: 4913503096892030682}
   - component: {fileID: 7418995762547194024}
   - component: {fileID: 4578419443122098175}
+  - component: {fileID: 7368039282927936429}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_64
   m_TagString: Untagged
@@ -98041,6 +98294,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7368039282927936429
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7368039282927936428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731658, y: -0.0051936195, z: -0.000052477084}
 --- !u!23 &7372751420802432973
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98125,6 +98391,7 @@ GameObject:
   - component: {fileID: 8940455030267966717}
   - component: {fileID: 6811758193730173723}
   - component: {fileID: 8210261141142864960}
+  - component: {fileID: 7387671946816360170}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_58
   m_TagString: Untagged
@@ -98132,6 +98399,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7387671946816360170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7387671946816360169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731658, y: -0.0051936195, z: -0.000052477084}
 --- !u!23 &7391197638070986041
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98608,6 +98888,7 @@ GameObject:
   - component: {fileID: 3248458109446832129}
   - component: {fileID: 7600133795913456406}
   - component: {fileID: 812760387574813240}
+  - component: {fileID: 7441027720661832922}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_65
   m_TagString: Untagged
@@ -98615,6 +98896,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7441027720661832922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7441027720661832921}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.0051936195, z: -0.000052477084}
 --- !u!1 &7441557680241344331
 GameObject:
   m_ObjectHideFlags: 0
@@ -101541,6 +101835,7 @@ GameObject:
   - component: {fileID: 1739164806118259380}
   - component: {fileID: 4319101286817647458}
   - component: {fileID: 1501327444298990065}
+  - component: {fileID: 7826996382426574284}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_60
   m_TagString: Untagged
@@ -101548,6 +101843,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7826996382426574284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7826996382426574283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731658, y: -0.0051936195, z: -0.000052477084}
 --- !u!33 &7828006328558490004
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -103749,6 +104057,7 @@ GameObject:
   - component: {fileID: 5075982924232337329}
   - component: {fileID: 3591726404291147615}
   - component: {fileID: 1063682070329471614}
+  - component: {fileID: 8018297131466676539}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_57
   m_TagString: Untagged
@@ -103756,6 +104065,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8018297131466676539
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018297131466676538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731658, y: -0.0051936195, z: -0.000052477084}
 --- !u!33 &8019441285349973818
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -109694,6 +110016,7 @@ GameObject:
   - component: {fileID: 5891640175216686537}
   - component: {fileID: 5946670487845918985}
   - component: {fileID: 2386773061141555057}
+  - component: {fileID: 8621671151158855865}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_54
   m_TagString: Untagged
@@ -109701,6 +110024,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8621671151158855865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621671151158855864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.0051936195, z: -0.000052477084}
 --- !u!33 &8627574033992658950
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -110359,6 +110695,7 @@ GameObject:
   - component: {fileID: 2806283943550466371}
   - component: {fileID: 1351550632849683015}
   - component: {fileID: 1549306890356677502}
+  - component: {fileID: 8694638515464301534}
   m_Layer: 8
   m_Name: SM_Env_Sewer_Canal_Drain_53
   m_TagString: Untagged
@@ -110366,6 +110703,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8694638515464301534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694638515464301533}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049463794, y: 0.011726094, z: 0.003347813}
+  m_Center: {x: 0.024731897, y: -0.0051936195, z: -0.000052477084}
 --- !u!4 &8702839344375077548
 Transform:
   m_ObjectHideFlags: 0
