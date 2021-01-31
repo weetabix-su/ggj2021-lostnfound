@@ -37,7 +37,6 @@ public class WaveManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("FUCKING GOD");
         if (other.tag == "Player")
         {
             Debug.Log("ggg");

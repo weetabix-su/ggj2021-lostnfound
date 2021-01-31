@@ -57,6 +57,13 @@ public class LevelController : MonoBehaviour
     public Animator boatManAnim;
     public GameObject endGameCam;
     public GameObject endGameText;
+    public GameObject endGameGate;
+    public GameObject endGameCol;
+    public Transform endSpawn;
+
+    public GameObject endGameShip;
+    public GameObject endGameShipman;
+    public GameObject endGameBridge;
 
     private void Awake()
     {
@@ -248,9 +255,25 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    public void StartEndGame()
+    {
+        endGameGate.SetActive(true);
+        endGameCol.SetActive(true);
+        endGameShip.SetActive(true);
+        endGameBridge.SetActive(true);
+        Fade(true, false);
+        LeanTween.delayedCall(1f, () => { SnapPos(); });
+    }
+
+    public void SnapPos()
+    {
+        playerObj.transform.position = endSpawn.position;
+    }
+
     public void EndGame()
     {
         Destroy(playerObj);
+        endGameShipman.SetActive(true);
         endGameCam.SetActive(true);
         boatManAnim.enabled = true;
         LeanTween.delayedCall(5f, () => { Fade(true, true); });
