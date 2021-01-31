@@ -12459,7 +12459,7 @@ MonoBehaviour:
   filmFadeUp: {fileID: 2046962594}
   filmFadeDown: {fileID: 988725615}
   fadeSpd: 3
-  currentLevelNumber: 3
+  currentLevelNumber: 1
   isReturning: 0
   spawnPoint:
   - {fileID: 1152913028}
