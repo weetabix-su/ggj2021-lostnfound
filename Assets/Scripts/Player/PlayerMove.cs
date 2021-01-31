@@ -79,7 +79,7 @@ public class PlayerMove : MonoBehaviour
 
             if ((moveDirections != moveMode.yOnly ? Input.GetAxis("Horizontal") != 0f : true) && (moveDirections != moveMode.xOnly ? Input.GetAxis("Vertical") != 0f : true))
             {
-                if (stepClock == 0f) sfx.Walk();
+                //if (stepClock == 0f) sfx.Walk();
                 stepClock += Time.deltaTime;
                 if (stepClock >= (1f / ((float)stepsPerMinute / 60f)))
                 {
