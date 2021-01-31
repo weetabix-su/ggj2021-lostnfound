@@ -73,6 +73,7 @@ public class GodDialogue : MonoBehaviour
             isPlaying = false;
             playerMove.GetComponent<PlayerMove>().enabled = true;
             Debug.Log("There is no sentence left.");
+            LeanTween.delayedCall(1.5f, () => { LevelController.instance.EndGame(); });
         }
     }
 

@@ -114,15 +114,15 @@ public class LevelController : MonoBehaviour
         {
             if(OnEnd!= null)
                 OnEnd();
-            LeanTween.moveLocalY(filmFadeUp, 548 , 1.5f);
-            LeanTween.moveLocalY(filmFadeDown, -548, 1.5f);
+            LeanTween.moveLocalY(filmFadeUp, 465 , 1.5f);
+            LeanTween.moveLocalY(filmFadeDown, -465, 1.5f);
         }
         else
         {
             if(OnStart!= null)
                 OnStart();
-            LeanTween.moveLocalY(filmFadeUp, 398, 1.5f);
-            LeanTween.moveLocalY(filmFadeDown, -398, 1.5f);
+            LeanTween.moveLocalY(filmFadeUp, 615, 1.5f);
+            LeanTween.moveLocalY(filmFadeDown, -615, 1.5f);
         }
     }
 
