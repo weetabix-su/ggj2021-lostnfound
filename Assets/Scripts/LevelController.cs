@@ -72,13 +72,13 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("5");
         LevelRetry();
     }
 
     public void Fade(bool isFadeIn, bool isEndGame)
     {
-        OnStart();
+        if(OnStart!= null)
+            OnStart();
         if (isFadeIn)
         {
             Color tempColor = Color.clear;
@@ -97,7 +97,8 @@ public class LevelController : MonoBehaviour
         {
             Color tempColor = Color.clear;
 
-            OnEnd();
+            if (OnEnd != null)
+                OnEnd();
             LeanTween.value(this.gameObject, Color.black, tempColor, fadeSpd).setEase(LeanTweenType.easeOutQuint).setOnUpdate((Color val) =>
             {
                 fadeImg.color = val;
@@ -111,13 +112,15 @@ public class LevelController : MonoBehaviour
     {
         if (!isFadeIn)
         {
-            OnEnd();
+            if(OnEnd!= null)
+                OnEnd();
             LeanTween.moveLocalY(filmFadeUp, 548 , 1.5f);
             LeanTween.moveLocalY(filmFadeDown, -548, 1.5f);
         }
         else
         {
-            OnStart();
+            if(OnStart!= null)
+                OnStart();
             LeanTween.moveLocalY(filmFadeUp, 398, 1.5f);
             LeanTween.moveLocalY(filmFadeDown, -398, 1.5f);
         }
@@ -125,7 +128,6 @@ public class LevelController : MonoBehaviour
 
     public void LevelRetry()
     {
-        Debug.Log("FML");
         Fade(true,false);
         LevelSetUp(currentLevelNumber);
     }

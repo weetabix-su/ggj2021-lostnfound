@@ -25,7 +25,7 @@ public class DreamBall : MonoBehaviour
 
     private void Update()
     {
-        if (actived)
+        if (actived && transform != null && player != null)
         {
             transform.position = new Vector3(player.position.x - 0.5f, player.position.y, player.position.z);
         }
