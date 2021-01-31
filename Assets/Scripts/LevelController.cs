@@ -119,19 +119,20 @@ public class LevelController : MonoBehaviour
 
     public void FilmFade(bool isFadeIn)
     {
+        Debug.Log("film");
         if (!isFadeIn)
         {
             if(OnEnd!= null)
                 OnEnd();
-            LeanTween.moveLocalY(filmFadeUp, 465 , 1.5f);
-            LeanTween.moveLocalY(filmFadeDown, -465, 1.5f);
+            LeanTween.moveLocalY(filmFadeUp, 615 , 1.5f);
+            LeanTween.moveLocalY(filmFadeDown, -615, 1.5f);
         }
         else
         {
             if(OnStart!= null)
                 OnStart();
-            LeanTween.moveLocalY(filmFadeUp, 615, 1.5f);
-            LeanTween.moveLocalY(filmFadeDown, -615, 1.5f);
+            LeanTween.moveLocalY(filmFadeUp, 465, 1.5f);
+            LeanTween.moveLocalY(filmFadeDown, -465, 1.5f);
         }
     }
 
@@ -276,7 +277,8 @@ public class LevelController : MonoBehaviour
         endGameShipman.SetActive(true);
         endGameCam.SetActive(true);
         boatManAnim.enabled = true;
-        LeanTween.delayedCall(5f, () => { Fade(true, true); });
         FilmFade(true);
+        LeanTween.delayedCall(5f, () => { Fade(true, true); });
+
     }
 }
