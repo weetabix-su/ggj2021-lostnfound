@@ -28,7 +28,7 @@ public class DreamBall : MonoBehaviour
     {
         if (actived && transform != null && player != null)
         {
-            transform.position = new Vector3(player.position.x - 0.5f, player.position.y, player.position.z);
+            transform.position = new Vector3(player.position.x - 0.5f, player.position.y + 0.219f, player.position.z);
         }
     }
 }
