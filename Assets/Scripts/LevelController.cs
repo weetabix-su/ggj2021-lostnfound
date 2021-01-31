@@ -21,6 +21,7 @@ public class LevelController : MonoBehaviour
 
     [Header("Level value")]
     public int currentLevelNumber;
+    public bool isReturning;
 
     [Header("Game constant")]
     public Transform[] spawnPoint;
@@ -104,6 +105,7 @@ public class LevelController : MonoBehaviour
                 fadeImg.color = val;
             }).setOnComplete(()=> {
                 //OnEnd();
+                isReturning = false;
             });
         }
     }
@@ -128,8 +130,12 @@ public class LevelController : MonoBehaviour
 
     public void LevelRetry()
     {
-        Fade(true,false);
-        LevelSetUp(currentLevelNumber);
+        if (!isReturning)
+        {
+            Fade(true, false);
+            LevelSetUp(currentLevelNumber);
+        }
+
     }
 
     public void LevelSetUp(int levelNumber)
@@ -182,8 +188,9 @@ public class LevelController : MonoBehaviour
 
     public void PlayerSpawn()
     {
-        playerObj.GetComponent<PlayerGeneral>().playerHealth = 100;
+        playerObj.GetComponent<PlayerGeneral>().playerHealth = 300;
         playerObj.transform.position = spawnPoint[currentLevelNumber - 1].position;
+
     }
 
     public void LevelOneSetUp()
