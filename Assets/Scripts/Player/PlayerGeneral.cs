@@ -7,8 +7,8 @@ public class PlayerGeneral : MonoBehaviour
 {
     public Transform snapPosition;
 
-    public int playerHealth;
-    public Slider hpBar;
+    //public int playerHealth;
+    //public Slider hpBar;
 
 
     private void OnEnable()
@@ -26,19 +26,19 @@ public class PlayerGeneral : MonoBehaviour
         transform.position = snapPosition.position;
     }
 
-    public void Start()
-    {
-        InvokeRepeating("HealthReduction", 3f, 1f);
-    }
+    //public void Start()
+    //{
+    //    InvokeRepeating("HealthReduction", 3f, 1f);
+    //}
 
-    public void HealthReduction()
-    {
-        playerHealth--;
-        if (playerHealth <= 0)
-        {
-            Debug.Log("7");
-            LevelController.instance.LevelRetry();
-        }
-        hpBar.value = playerHealth;
-    }
+    //public void HealthReduction()
+    //{
+    //    playerHealth--;
+    //    if (playerHealth <= 0)
+    //    {
+    //        Debug.Log("7");
+    //        LevelController.instance.LevelRetry();
+    //    }
+    //    hpBar.value = playerHealth;
+    //}
 }

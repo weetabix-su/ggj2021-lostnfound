@@ -30081,7 +30081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4257246b4cdd28040b82e87dd2318fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 6465993244389002018}
+  rb: {fileID: 0}
   depthBeforeSubmerged: 1
   displacementAmount: 3
   increaseHeight: 0
@@ -94371,7 +94371,6 @@ GameObject:
   - component: {fileID: 1047875419190874209}
   - component: {fileID: 1924053135}
   - component: {fileID: 1924053134}
-  - component: {fileID: 6465993244389002018}
   m_Layer: 8
   m_Name: Coffee_mug
   m_TagString: Untagged
@@ -94379,22 +94378,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &6465993244389002018
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6465993244389002017}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 122
-  m_CollisionDetection: 0
 --- !u!4 &6472061032063634290
 Transform:
   m_ObjectHideFlags: 0
