@@ -195,7 +195,7 @@ public class LevelController : MonoBehaviour
 
     public void PlayerSpawn()
     {
-        playerObj.GetComponent<PlayerGeneral>().playerHealth = 300;
+        //playerObj.GetComponent<PlayerGeneral>().playerHealth = 300;
         playerObj.transform.position = spawnPoint[currentLevelNumber - 1].position;
 
     }

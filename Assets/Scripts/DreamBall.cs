@@ -19,7 +19,8 @@ public class DreamBall : MonoBehaviour
             Debug.Log("drop");
             actived = false;
             GetComponent<SphereCollider>().enabled = false;
-            transform.position = new Vector3(player.position.x, player.position.y - 0.5f, player.position.z);
+            LeanTween.move(this.gameObject, new Vector3(player.position.x, player.position.y - 0.5f, player.position.z), 1.5f);
+            //transform.position = new Vector3(player.position.x, player.position.y - 0.5f, player.position.z);
         }
     }
 
