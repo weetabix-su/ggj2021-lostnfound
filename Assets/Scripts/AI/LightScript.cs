@@ -18,7 +18,11 @@ public class LightScript : MonoBehaviour
     void Update()
     {
         if (reference == null)
-            return;
+        {
+            Destroy(gameObject);
+        }
+        if (Vector3.Distance(transform.position, new Vector3(-6.300614f, 6.97f, 14.45f)) <= 0.1f)
+            Destroy(gameObject);
         transform.position = new Vector3(reference.position.x - diff, originalPosition.y, originalPosition.z);
     }
 }
