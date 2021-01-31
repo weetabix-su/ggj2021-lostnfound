@@ -234,30 +234,18 @@ public class LevelController : MonoBehaviour
         scene2Go.Add(Instantiate(coinControlGo, coinControlGoSpawnLocation, Quaternion.identity));
     }
 
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            DreamBallGet();
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            FilmFade(false);
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Debug.Log("6");
-            LevelRetry();
-        }
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            EndGame();
-        }
-    }
-
     public void StartEndGame()
     {
+        int idx = 0;
+        foreach (GameObject obj in scene1Go)
+        {
+            DestroyImmediate(obj);
+            idx++;
+        }
+        for (int i = 0; i < idx; i++)
+        {
+            scene1Go.RemoveAt(0);
+        }
         endGameGate.SetActive(true);
         endGameCol.SetActive(true);
         endGameShip.SetActive(true);
