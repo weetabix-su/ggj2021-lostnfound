@@ -17,6 +17,8 @@ public class PlayerJump : MonoBehaviour
     PlayerSFX sfx;
     bool isJump;
 
+    public bool activated = true;
+
     void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
@@ -25,10 +27,30 @@ public class PlayerJump : MonoBehaviour
         sfx = GetComponent<PlayerSFX>();
         gc = GetComponent<PlayerGroundCheck>();
         ac = GetComponent<PlayerAnimControl>();
+        LevelController.OnStart += SetInactived;
+        LevelController.OnEnd += SetActived;
+    }
+
+    private void OnDestroy()
+    {
+        LevelController.OnStart -= SetInactived;
+        LevelController.OnEnd -= SetActived;
+    }
+
+    void SetActived()
+    {
+        activated = true;
+    }
+
+    void SetInactived()
+    {
+        activated = false;
     }
 
     void FixedUpdate()
     {
+        if (!activated)
+            return;
         if (isJump)
         {
             rb.AddForce(Vector2.up * jumpVelocity, ForceMode.Impulse);
@@ -45,6 +67,9 @@ public class PlayerJump : MonoBehaviour
 
     private void Update()
     {
+        if (!activated)
+            return;
+
         if (gc == null && Input.GetButtonDown("Jump")) isJump = true;
         else if (gc != null && gc.isGrounded && Input.GetButtonDown("Jump")) isJump = true;
     }

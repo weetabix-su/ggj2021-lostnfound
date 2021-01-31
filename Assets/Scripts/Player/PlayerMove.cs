@@ -23,16 +23,38 @@ public class PlayerMove : MonoBehaviour
 
     float stepClock;
 
+    public bool activated = true;
+
     private void OnEnable()
     {
         gc = GetComponent<PlayerGroundCheck>();
         ac = GetComponent<PlayerAnimControl>();
         sfx = GetComponent<PlayerSFX>();
         stepClock = 0f;
+        LevelController.OnStart += SetInactived;
+        LevelController.OnEnd += SetActived;
+    }
+
+    private void OnDestroy()
+    {
+        LevelController.OnStart -= SetInactived;
+        LevelController.OnEnd -= SetActived;
+    }
+
+    void SetActived()
+    {
+        activated = true;
+    }
+
+    void SetInactived()
+    {
+        activated = false;
     }
 
     void FixedUpdate()
     {
+        if (!activated)
+            return;
         // If PlayerGroundCheck is on the same gameObject and checkGround is enabled, check if player is grounded
         //if (gc != null && checkGround && !gc.isGrounded) return;
         // Moves player depending on Input Axis
@@ -43,6 +65,8 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (!activated)
+            return;
         // Checks if PlayerSFX exists in GameObject
         if (sfx != null)
         {

@@ -7156,6 +7156,7 @@ MonoBehaviour:
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   useAnimatorJumpTrigger: 1
+  activated: 1
 --- !u!114 &830802495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7175,6 +7176,7 @@ MonoBehaviour:
   flipY: 0
   checkGround: 0
   useAnimatorTurnTrigger: 1
+  activated: 1
 --- !u!195 &830802496
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9428,7 +9430,7 @@ MonoBehaviour:
   filmFadeUp: {fileID: 2046962594}
   filmFadeDown: {fileID: 988725615}
   fadeSpd: 3
-  currentLevelNumber: 1
+  currentLevelNumber: 3
   spawnPoint:
   - {fileID: 1152913028}
   - {fileID: 1184885409}
