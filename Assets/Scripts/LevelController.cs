@@ -53,7 +53,7 @@ public class LevelController : MonoBehaviour
     public Vector3 coinControlGoSpawnLocation;
 
     [Header("End Scene reference")]
-    public Animator boatAnim;
+    public Animator boatManAnim;
     public GameObject endGameCam;
     public GameObject endGameText;
 
@@ -245,7 +245,7 @@ public class LevelController : MonoBehaviour
     {
         Destroy(playerObj);
         endGameCam.SetActive(true);
-        boatAnim.enabled = true;
+        boatManAnim.enabled = true;
         LeanTween.delayedCall(5f, () => { Fade(true, true); });
         FilmFade(true);
     }
