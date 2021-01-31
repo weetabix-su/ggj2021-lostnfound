@@ -21,6 +21,10 @@ public class BoatPlayer : MonoBehaviour
         camAnim.enabled = true;
     }
 
+    public void GetDreamBall()
+    {
+        LevelController.instance.DreamBallGet();
+    }
     private void Update()
     {
         if (activated)

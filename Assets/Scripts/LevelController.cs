@@ -239,7 +239,7 @@ public class LevelController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            FilmFade(true);
+            DreamBallGet();
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -280,5 +280,12 @@ public class LevelController : MonoBehaviour
         FilmFade(true);
         LeanTween.delayedCall(5f, () => { Fade(true, true); });
 
+    }
+
+    public void DreamBallGet()
+    {
+        GameObject dreamBall = Instantiate(dreamGo, boatManAnim.gameObject.transform.position + new Vector3(0.5f, 0.2f, 0),Quaternion.identity);
+        dreamBall.transform.parent = boatManAnim.gameObject.transform;
+        LeanTween.moveLocalY(dreamBall, 1.32f, 1f);
     }
 }
