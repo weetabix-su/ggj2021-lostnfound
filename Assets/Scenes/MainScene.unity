@@ -6211,12 +6211,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d5fdb0bfc92e48942821af2988fe14ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.623125
+      value: -15.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5fdb0bfc92e48942821af2988fe14ff,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.208168
+      value: -38.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5fdb0bfc92e48942821af2988fe14ff,
         type: 3}
@@ -10089,8 +10089,6 @@ GameObject:
   - component: {fileID: 954737774}
   - component: {fileID: 954737773}
   - component: {fileID: 954737772}
-  - component: {fileID: 954737771}
-  - component: {fileID: 954737770}
   - component: {fileID: 954737769}
   m_Layer: 0
   m_Name: Water (1)
@@ -10122,44 +10120,11 @@ MeshCollider:
   m_GameObject: {fileID: 954737767}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ebfb4988eb16add4784122504f75fe2f, type: 2}
---- !u!114 &954737770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954737767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08fd19fd065da0047aadf26fdaae56b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 1
-  length: 2
-  speed: 1
-  offset: 0
---- !u!114 &954737771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954737767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed70a70ef975d349ade81ffb3628831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveHeight: 1
-  waveFrequency: 0.5
-  waveLength: 0.75
-  waveOriginPosition: {x: 0, y: 0, z: 0}
-  tris: 
 --- !u!114 &954737772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12658,7 +12623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483045126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.99, y: 8.19, z: -1.42}
+  m_LocalPosition: {x: 0.99, y: 8.19, z: 0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 479153809}
