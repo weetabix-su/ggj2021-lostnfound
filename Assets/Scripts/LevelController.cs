@@ -142,6 +142,31 @@ public class LevelController : MonoBehaviour
         }
         LeanTween.delayedCall(1f, () => { PlayerSpawn(); });
     }
+
+
+    public void LevelSetUpCheckPoint(int levelNumber)
+    {
+        switch (levelNumber)
+        {
+            case 1:
+                {
+                    LeanTween.delayedCall(1.1f, () => { LevelOneSetUp(); });
+                }
+                break;
+            case 2:
+                {
+                    LeanTween.delayedCall(1.1f, () => { LevelTwoSetUp(); });
+                }
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+        }
+    }
+
     public void PlayerSpawn()
     {
         playerObj.GetComponent<PlayerGeneral>().playerHealth = 100;

@@ -21,7 +21,7 @@ public class CheckPoint : MonoBehaviour
                     OnCheck();
             }
 
-            LevelController.instance.LevelSetUp(LevelController.instance.currentLevelNumber);
+            LevelController.instance.LevelSetUpCheckPoint(LevelController.instance.currentLevelNumber);
             Destroy(gameObject);
         }
     }
